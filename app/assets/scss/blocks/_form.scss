@@ -1,0 +1,41 @@
+.form {
+  &__input {
+    height: 50px;
+    padding: 12px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    color: $white;
+    font-size: 14px;
+    transition: background 0.2s ease-in;
+    &::placeholder {
+      color: $placeholder;
+    }
+    &:focus {
+      background: rgba(255, 255, 255, 0.25);
+    }
+  }
+  &__privacy {
+    color: $privacy;
+    font-size: 13px;
+    text-align: center;
+    line-height: 1.23;
+    &--bottom {
+      @include mediaTablet {
+        grid-row: 4 / 5;
+      }
+    }
+  }
+  &__btn {
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px;
+    color: $white;
+    background: $accent;
+    transition: background 0.2s ease-in;
+    &:hover {
+      background: saturate($accent, 10%);
+    }
+  }
+}

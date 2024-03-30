@@ -1,0 +1,40 @@
+.benefits {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "II";
+    left: calc(50% + 555px);
+    transform: translateX(-50%);
+    @include decorNum;
+  }
+  &__row {
+    display: flex;
+    gap: 70px;
+    @include mediaTablet {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 40px;
+    }
+  }
+  &__item {
+    text-align: center;
+  }
+  &__item-img {
+    margin-bottom: 53px;
+    @include mediaTablet {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 20px;
+    }
+  }
+  &__item-text {
+    font-family: $font-secondary;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.35;
+    @include mediaTablet {
+      font-size: 16px;
+    }
+  }
+}
